@@ -1,0 +1,6 @@
+.fake-button{
+    display: inline-block;
+    background-color: gray;
+    padding: 5px;
+    cursor: pointer;
+}

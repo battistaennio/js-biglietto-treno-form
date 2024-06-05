@@ -1,21 +1,24 @@
-let risultato;
+// let risultato;
 
-//chiedo età
-let userAge = parseInt(prompt("Inserisci la tua età"));
-console.log("età: ", userAge);
-document.getElementById("age").innerHTML = userAge;
+//selezione età
+let userAge = document.getElementById("age");
 
-//chiedo numero chilometri da percorrere
-let userKM = parseInt(prompt("Inserisci i km da percorrere"));
-console.log("km: ", userKM);
-document.getElementById("km").innerHTML = userKM;
+//selezione km
+let userKM = document.getElementById("km");
+
+console.log(userAge, userKM);
+
+//selezione bottone
+const bottoneInvia = document.getElementById("collect_data")
+
+console.log(bottoneInvia);
 
 
+
+
+/*
 //moltiplico userKM a 0.21
 const prezzoKM = userKM * 0.21;
-console.log("€: ", prezzoKM);
-document.getElementById("price_km").innerHTML = prezzoKM.toFixed(2);
-
 
 //se età è utente è <= a 17 sottraggo prezzoKM al 20%
 if (userAge <= 17) {  
@@ -28,10 +31,10 @@ if (userAge <= 17) {
 
 //approssimo il risultato alla seconda cifra decimale
 const prezzoFinale = risultato.toFixed(2);
-console.log("prezzo finale 1: ", prezzoFinale);
 
 //comunico prezzo finale
 document.getElementById("train_price").innerHTML = prezzoFinale;
+*/
 
 // usando esclusivamente due input e un bottone, richiediamo età passeggero e km da percorrere
 
