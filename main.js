@@ -6,6 +6,10 @@ let inputAge = document.getElementById("age");
 //selezione km
 let inputKM = document.getElementById("km");
 
+//selezione nome
+let inputName = document.getElementById("name");
+
+
 //selezione bottone
 const bottoneInvia = document.getElementById("collect_data")
 
@@ -13,12 +17,15 @@ const bottoneInvia = document.getElementById("collect_data")
 bottoneInvia.addEventListener("click",
     function() {    
         
-        //colleziono age e km
+        //colleziono age, km e nome
         let valoreAge = parseInt(inputAge.value);
         console.log("valoreAge: ", valoreAge);
 
         let valoreKM = parseInt(inputKM.value);
         console.log("valoreKM: ", valoreKM);
+
+        let valoreName = inputName.value;
+        console.log("valoreName: ", valoreName);
 
         //moltiplico userKM a 0.21
         const prezzoKM = valoreKM * 0.21;
@@ -31,7 +38,18 @@ bottoneInvia.addEventListener("click",
         } else {   //altimenti il risultato è uguale al prezzo al km
             risultato = prezzoKM;
         }
-        console.log(risultato);
+
+        //comunico nome, prezzo finale, carrozza, codice CP in pagina
+        document.getElementById("name-output").innerHTML = valoreName;
+
+        document.getElementById("ticket-output").innerHTML = risultato.toFixed(2);
+
+        document.getElementById("random-output-1").innerHTML = Math.floor(Math.random() * 10) + 1;
+
+        document.getElementById("random-output-2").innerHTML = Math.floor(Math.random() * 100000) + 10000;
+
+        //comunico tipo biglietto
+
     }
 );
 
@@ -43,10 +61,6 @@ bottoneInvia.addEventListener("click",
 
 //approssimo il risultato alla seconda cifra decimale
 // const prezzoFinale = risultato.toFixed(2);
-
-//comunico prezzo finale
-// document.getElementById("train_price").innerHTML = prezzoFinale;
-
 
 // usando esclusivamente due input e un bottone, richiediamo età passeggero e km da percorrere
 

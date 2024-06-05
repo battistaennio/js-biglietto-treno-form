@@ -11,7 +11,9 @@ body{
 }
 
 /* SECTION */
-
+section{
+    margin-bottom: 20px;
+}
 /* titolo */
 .title{
     color: white;
@@ -25,8 +27,11 @@ h2{
 
 /* contenitore card */
 .container{
-    margin: 0 10%;
+    margin: 0 15%;
     background-color: white;
+}
+
+#dati{
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -64,4 +69,32 @@ h2{
     color: #b91450;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 10px;
+}
+
+#ticket{
+    padding: 20px;
+    min-height: 150px;
+}
+
+#data-output{
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+#data-output .box:first-child{
+    background-color: gray;
+}
+
+.box{
+    padding: 20px;
+    min-height: 100px;
+}
+
+.box span{
+    margin-top: 50px;
+    display: inline-block;
 }
