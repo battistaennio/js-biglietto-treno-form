@@ -11,10 +11,10 @@ let inputName = document.getElementById("name");
 
 
 //selezione bottone
-const bottoneInvia = document.getElementById("collect_data")
+const bottoneGenera = document.getElementById("collect_data")
 
 //evento click
-bottoneInvia.addEventListener("click",
+bottoneGenera.addEventListener("click",
     function(event) {    
         
         event.preventDefault()
