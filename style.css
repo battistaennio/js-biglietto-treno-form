@@ -1,6 +1,67 @@
-.fake-button{
-    display: inline-block;
-    background-color: gray;
+/* GENERALI */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #b91450;
+}
+
+/* SECTION */
+
+/* titolo */
+.title{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    padding: 20px 0;
+}
+
+/* contenitore card */
+.container{
+    margin: 0 10%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* card */
+.card{
+    width: calc(100% / 3 - 100px);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card.big{
+    width: 100%;
+}
+
+.card h3{
+    margin-bottom: 15px;
+    color: #b91450;
+}
+
+.card input{
+    border: 1px solid #b91450;
+    border-radius: 5px;
     padding: 5px;
+    text-align: center;
+}
+
+.card .fake-button{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgb(190, 190, 190);
+    color: #b91450;
+    border-radius: 5px;
     cursor: pointer;
 }
