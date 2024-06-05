@@ -15,17 +15,15 @@ const bottoneInvia = document.getElementById("collect_data")
 
 //evento click
 bottoneInvia.addEventListener("click",
-    function() {    
+    function(event) {    
         
+        event.preventDefault()
         //colleziono age, km e nome
         let valoreAge = parseInt(inputAge.value);
-        console.log("valoreAge: ", valoreAge);
 
         let valoreKM = parseInt(inputKM.value);
-        console.log("valoreKM: ", valoreKM);
 
         let valoreName = inputName.value;
-        console.log("valoreName: ", valoreName);
 
         //moltiplico userKM a 0.21
         const prezzoKM = valoreKM * 0.21;
@@ -49,6 +47,14 @@ bottoneInvia.addEventListener("click",
         document.getElementById("random-output-2").innerHTML = Math.floor(Math.random() * 100000) + 10000;
 
         //comunico tipo biglietto
+        if (valoreAge <= 17) {  //se età è utente è <= a 17 sottraggo prezzoKM al 20%
+            document.getElementById("type-ticket-output").innerHTML = "Junior";
+            
+        } else if (valoreAge >= 65) {  	//altrimenti se età è utente è >= a 65 sottraggo prezzoKM al 40%
+            document.getElementById("type-ticket-output").innerHTML = "Senior";
+        } else {   //altimenti il risultato è uguale al prezzo al km
+            document.getElementById("type-ticket-output").innerHTML = "Standard";
+        }
 
     }
 );
