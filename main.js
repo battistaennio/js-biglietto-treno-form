@@ -9,7 +9,6 @@ let inputKM = document.getElementById("km");
 //selezione nome
 let inputName = document.getElementById("name");
 
-
 //selezione bottone
 const bottoneGenera = document.getElementById("collect_data")
 
@@ -46,28 +45,14 @@ bottoneGenera.addEventListener("click",
 
         document.getElementById("random-output-2").innerHTML = Math.floor(Math.random() * 100000) + 10000;
 
-        //comunico tipo biglietto
-        if (valoreAge <= 17) {  //se età è utente è <= a 17 sottraggo prezzoKM al 20%
-            document.getElementById("type-ticket-output").innerHTML = "Junior";
-            
-        } else if (valoreAge >= 65) {  	//altrimenti se età è utente è >= a 65 sottraggo prezzoKM al 40%
-            document.getElementById("type-ticket-output").innerHTML = "Senior";
-        } else {   //altimenti il risultato è uguale al prezzo al km
-            document.getElementById("type-ticket-output").innerHTML = "Standard";
+        //comunico tipologia biglietto
+        if (valoreAge <= 17) {  //se età è utente è <= a 17 Biglietto Junior
+            document.getElementById("type-ticket-output").innerHTML = "Biglietto Junior";
+        } else if (valoreAge >= 65) {  	//altrimenti se età è utente è >= a 65 Biglietto Senior
+            document.getElementById("type-ticket-output").innerHTML = "Biglietto Senior";
+        } else {   //altimenti Biglietto Standard
+            document.getElementById("type-ticket-output").innerHTML = "Biglietto Standard";
         }
 
     }
-);
-
-
-
-
-
-//se età è utente è <= a 17 sottraggo prezzoKM al 20%
-
-//approssimo il risultato alla seconda cifra decimale
-// const prezzoFinale = risultato.toFixed(2);
-
-// usando esclusivamente due input e un bottone, richiediamo età passeggero e km da percorrere
-
-//completare il form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
+)
